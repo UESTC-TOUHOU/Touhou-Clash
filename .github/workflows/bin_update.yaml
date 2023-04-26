@@ -95,7 +95,7 @@ jobs:
 
     - name: Merge to config
       run: |
-        cp ./bin/Country.mmdb ./config & cp ./bin/geosite.dat ./config
+        cp ./bin/Country.mmdb ./config & cp ./bin/geosite.dat ./config/GeoSite.dat
 
     - name: Commit and push
       run: |
