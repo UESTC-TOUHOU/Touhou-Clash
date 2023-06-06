@@ -1,0 +1,44 @@
+#https://sub.xeton.dev/sub?target=clash&insert=true&new_name=true&scv=true&udp=true&exclude=&include=&url=[Your_url]&emoji=true&list=false&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&config=https://github.com/juewuy/ShellClash/raw/master/rules/ShellClash_Full_Block.ini
+# You can use This URL to create a config for yourself.
+# 
+# This is a config template to guide you how to configure webui for clash
+# 
+# More information plz to read the official document
+mixed-port: 7890  
+redir-port: 9797
+tproxy-port: 9898
+authentication: [""]
+allow-lan: true               # If you wanna your lan device to acess your clash or not
+mode: Rule
+log-level: info
+ipv6: true                    # Turn on ipv6 proxy
+external-controller: :9999    # Web ui port
+external-ui: ui               # Web ui path
+tun:                          # Turn on tun mode
+  enable: true
+  stack: system
+  dns-hijack:
+    - 198.18.0.2:53 
+  auto-route: true 
+  auto-detect-interface: true 
+experimental: {ignore-resolve-fail: true, interface-name: en0}
+dns: {enable: true, ipv6: true, listen: 0.0.0.0:1053, use-hosts: true,  fake-ip-range: 198.18.0.1/16, enhanced-mode: fake-ip, fake-ip-filter: [".lan", "time.windows.com", "time.nist.gov",
+"time.apple.com", "time.asia.apple.com", ".ntp.org.cn", ".openwrt.pool.ntp.org", "time1.cloud.tencent.com",
+"time.ustc.edu.cn", "pool.ntp.org", "ntp.u buntu.com", "ntp.aliyun.com", "ntp1.aliyun.com", "ntp2.aliyun.com",
+"ntp3.aliyun.com", "ntp4.aliyun.com", "ntp5.aliyun.com", "ntp6.aliyun.com", "ntp7.aliyun.com", "time1. aliyun.com",
+"time2.aliyun.com", "time3.aliyun.com", "time4.aliyun.com", "time5.aliyun.com", "time6.aliyun.com",
+"time7.aliyun.com", ".time.edu.cn", "time1.apple.com", " time2.apple.com", "time3.apple.com", "time4.apple.com",
+"time5.apple.com", "time6.apple.com", "time7.apple.com", "time1.google.com", "time2.google.com",
+"time3.google.com ", "time4.google.com", "music.163.com", ".music.163.com", ".126.net", "musicapi.taihe.com",
+"music.taihe.com", "songsearch.kugou.com", "trackercdn.kugou.com", ".kuwo.c n", "api-jooxtt.sanook.com",
+"api.joox.com", "joox.com", "y.qq.com", ".y.qq.com", "streamoc.music.tc.qq.com", "mobileoc.music.tc.qq.com",
+"isure.stream.qqmusic.qq.com", "dl.stream.qqmusic.qq.com", "aqqmusic.tc.qq.com", "amobile.music.tc.qq.com", "
+.xiami.com", ".music.migu.cn", "music.migu.cn", ".msftconnecttest.com", ".msftncsi.com", "localhost.ptlogin2.qq.com", "
+...srv.nintendo.net", "..stun.playstation.net", "xbox...microsoft.com", "..xboxlive.com", "proxy.golang.org",".sgcc.com.cn","
+.al icdn.com",".aliyuncs.com"],default-nameserver: [114.114.114.114, 223.5.5.5, 1.1.1.1, 1.0.0.1, 8.8.8.8], nameserver: [223.5.5.5,223.6.6.6,211.140.197.58,211.137.32.178,114.114.114.114,1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4], fallback: [1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4], fallback-filter: {geoip: true}}   # You can edit dns as you like
+sniffer: {enable: true, sniffing: [tls, http]}      # This is for meta core. If you are using the official core, turn off it    
+store-selected: true
+hosts:    # To define host
+   'time.android.com': 203.107.6.88
+   'time.facebook.com': 203.107.6.88  
+   'localhost': 127.0.0.1
