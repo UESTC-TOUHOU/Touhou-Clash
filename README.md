@@ -16,5 +16,5 @@ Execute start.vbs and visit the ip:port(define in the config). Then enjoy your T
 
 #### Linux
 
-Execute Linux.sh to use `systemctl ` create clash service. Then visit the ip:port(define in the config) and enjoy your Touhou Clash💕
+Edit the service file and change the path to you path configuration. Then execute Linux.sh to use `systemctl ` create clash service. Now you can visit the ip:port(define in the config) and enjoy your Touhou Clash💕
 
