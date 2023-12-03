@@ -61,7 +61,6 @@ jobs:
         rm -rf meta_db.zip
         rm -rf meta_yacd.zip
         rm -rf \metacubexd-gh-pages
-#        rm -rf \yacd-gh-pages
         rm -rf \Razord-meta-gh-pages
         rm -rf \Yacd-meta-gh-pages
         echo 面板更新完成！
