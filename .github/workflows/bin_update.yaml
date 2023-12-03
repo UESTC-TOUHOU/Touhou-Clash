@@ -37,27 +37,27 @@ jobs:
         curl -kfSL -o clashdb.zip  https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip
         echo 下载Meta面板
         curl -kfSL -o meta_db.zip  https://github.com/MetaCubeX/Razord-meta/archive/gh-pages.zip
-        echo 下载yacd面板
-        curl -kfSL -o yacd.zip  https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip 
+#        echo 下载yacd面板
+#        curl -kfSL -o yacd.zip  https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip 
         echo 下载meta魔改yacd面板
         curl -kfSL -o meta_yacd.zip  https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip
         echo 解压缩
         unzip -o clashdb.zip > /dev/null
-        unzip -o yacd.zip > /dev/null
-        cd \clash-dashboard-gh-pages
+#        unzip -o yacd.zip > /dev/null
+        cd \metacubexd-gh-pages
         tar -zcvf clashdb.tar.gz * > /dev/null
         mv -f clashdb.tar.gz ../
         cd ..
-        cd \yacd-gh-pages
-        echo yacd特殊处理
-        find -name '*.map' | xargs  rm -rf
-        rm -rf report.html
-        tar -zcvf yacd.tar.gz * > /dev/null
-        mv -f yacd.tar.gz ../
-        cd ..
-        echo 解压缩
-        unzip -o meta_db.zip > /dev/null
-        unzip -o meta_yacd.zip > /dev/null
+#        cd \metacubexd-gh-pages
+#        echo yacd特殊处理
+#        find -name '*.map' | xargs  rm -rf
+#        rm -rf report.html
+#        tar -zcvf yacd.tar.gz * > /dev/null
+#        mv -f yacd.tar.gz ../
+#        cd ..
+#        echo 解压缩
+#        unzip -o meta_db.zip > /dev/null
+#        unzip -o meta_yacd.zip > /dev/null
         cd \Razord-meta-gh-pages
         tar -zcvf meta_db.tar.gz * > /dev/null
         mv -f meta_db.tar.gz ../
@@ -73,8 +73,8 @@ jobs:
         rm -rf yacd.zip
         rm -rf meta_db.zip
         rm -rf meta_yacd.zip
-        rm -rf \clash-dashboard-gh-pages
-        rm -rf \yacd-gh-pages
+        rm -rf \metacubexd-gh-pages
+#        rm -rf \yacd-gh-pages
         rm -rf \Razord-meta-gh-pages
         rm -rf \Yacd-meta-gh-pages
         echo 面板更新完成！
