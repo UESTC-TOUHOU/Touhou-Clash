@@ -49,8 +49,8 @@ jobs:
     - name: For windows
       run: |
         echo "download_version=${download_version}" >> ${GITHUB_ENV}
-        archs=(amd64-compatible amd64-cgo amd64 386 386-cgo arm32v7 arm64)
-        new_name=(amd64-compatible amd64-cgo amd64 386 386-cgo armv7 armv8)
+        archs=(amd64-compatible amd64-go120 amd64 386 386-go120 arm32v7 arm64)
+        new_name=(amd64-compatible amd64-go120 amd64 386 386-go120 armv7 armv8)
         for((i=0;i<7;i++));do
           wget "${download_url}/${download_tag}/mihomo-windows-${archs[i]}-${download_version}.zip" -O - | gunzip -c > ./tmp/clash-windows-${new_name[i]}
         done
