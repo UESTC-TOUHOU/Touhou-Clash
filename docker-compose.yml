@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  Clash:
+    image: metacubex/clash-meta:latest
+    container_name: Clash
+    network_mode: "host"
+    volumes:
+      - "./config:/root/.config/clash"
+    privileged: true
+    restart: always
+    stdin_open: true
+    tty: true
