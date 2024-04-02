@@ -64,6 +64,6 @@ jobs:
         sed -i "s/meta_v=.*/meta_v=$(./bin/clash.meta/clash-linux-amd64 -v 2>/dev/null | head -n 1 | sed 's/ linux.*//;s/.* //')/" bin/version
     - name: Commit and push
       run: |
-        git config --global user.email "wray-lee@outlook.com" && git config --global user.name "Bot"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com" && git config --global user.name "github-actions[bot]"
         git add . && git commit -m "更新Meta内核至${download_version}" || exit 0
         git push
