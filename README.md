@@ -6,7 +6,15 @@
 
 ### 1️⃣Step.1
 
+<<<<<<< HEAD
 Put your `config.yaml` in folder Config(Make sure your config is available)
+=======
+To use Touhou-Clash, you have two choice in step one here
+
+- Replace the `${url}` in the `config/config.yaml` with your own subscription URL 
+
+- Put your own `config.yaml` in folder Config(Make sure your config is available)
+>>>>>>> dev
 
 ### 2️⃣Step.2
 
