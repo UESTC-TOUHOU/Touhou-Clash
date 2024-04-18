@@ -358,8 +358,8 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    proxies:
-      - 🎮 游戏节点      
+    filter: "(?!)游戏|Game|game|加速"
+    include-all-providers: true   
 
   - name: ⚖️ 负载均衡-散列
     type: load-balance
@@ -367,10 +367,8 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     tolerance: 50
-    use:
-      - bridgethewise
-    proxies:
-      - Hysteria2
+    include-all-providers: true
+
   - name: ⚖️ 负载均衡-轮询
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -380,10 +378,7 @@ proxy-groups:
     include-all-providers: true
 
   - name: ⚖️ 负载均衡-effective
-    type: load-balance
-    use:
-      - cheycnimok_provider
-      - frulyukjtr_provider     
+    type: load-balance     
     url: http://www.gstatic.com/generate_204
     interval: 300
     strategy: round-robin
@@ -618,6 +613,7 @@ proxy-groups:
     filter: "(?!)游戏|Game|game|加速"
     proxies:
       - DIRECT
+
   - name: 🎮 Osu!
     type: select
     proxies:
@@ -678,6 +674,7 @@ proxy-groups:
     tolerance: 50
     include-all-providers: true
     filter: "(?i)专线|专用|高级|直连|急速|高倍率|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC"
+
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -725,8 +722,6 @@ proxy-groups:
     tolerance: 50
     include-all-providers: true
     filter: "(?i)新加坡|坡|狮城|SG|Singapore"
-    proxies:
-      - Hysteria2
 
   - name: 🌏其它地区
     type: url-test
