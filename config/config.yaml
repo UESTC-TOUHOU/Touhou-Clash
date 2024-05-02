@@ -775,6 +775,7 @@ rules:
   - RULE-SET,ai,🤖 人工智能
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
   - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,📲 电报消息  
   - RULE-SET,Game,🎮 外服游戏
   - RULE-SET,Bahamut,📺 巴哈姆特
   - RULE-SET,ProxyMedia,🌍 国外媒体
