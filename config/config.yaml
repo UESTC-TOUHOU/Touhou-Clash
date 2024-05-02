@@ -176,7 +176,7 @@ rule-providers:
     type: http
     behavior: classical
     format: text
-    path: ./rules/BanAD.list
+    path: ./rules/BilibiliHMT.list
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"
     interval: 600
   ai:
@@ -204,7 +204,7 @@ rule-providers:
     type: http
     behavior: classical
     format: text
-    path: ./rules/BanAD.list
+    path: ./rules/Telegram.list
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list"
     interval: 600
   Game:
@@ -232,7 +232,7 @@ rule-providers:
     type: http
     behavior: classical
     format: text
-    path: ./rules/BanAD.list
+    path: ./rules/ChinaMedia.list
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
     interval: 600
   NetEaseMusic:
@@ -260,14 +260,14 @@ rule-providers:
     type: http
     behavior: classical
     format: text
-    path: ./rules/BanAD.list
+    path: ./rules/ChinaCompanyIp.list
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
     interval: 600
   Download:
     type: http
     behavior: classical
     format: text
-    path: ./rules/BanAD.list
+    path: ./rules/Download.list
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
     interval: 600
 
