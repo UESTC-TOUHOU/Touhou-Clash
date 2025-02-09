@@ -1,6 +1,6 @@
 # Touhou-Clash
 
-> This projects will create a  clash service with Touhou UI for you
+> This projects will create a  clash service with Touhou UI for you.
 
 ## How to use🤔
 
