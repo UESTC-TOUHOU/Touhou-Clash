@@ -25,7 +25,24 @@ external-ui: ui
 # Cancel the comment and replace {$secret} if you wanna a secret to access to the webpage
 #
 #secret: {$secret}
-tun: {enable: false}
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+# enable only when linux environment
+  #auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  device: utun0
+  strict-route: true
+  gso: true
+  endpoint-independent-nat: false
+  route-exclude-address:
+  - 10.0.0.0/8
+  - 192.168.0.0/16
+  - fc00::/7
 experimental: {ignore-resolve-fail: true, interface-name: en0}
 sniffer: {enable: true, skip-domain: [Mijia Cloud], sniff: {tls: {ports: [443, 8443]}, http: {ports: [80, 8080-8880]}}}
 store-selected: true
