@@ -38,7 +38,6 @@ tun:
     - tcp://any:53
   device: utun0
   strict-route: true
-
   endpoint-independent-nat: false
   route-exclude-address:
   - 10.0.0.0/8
