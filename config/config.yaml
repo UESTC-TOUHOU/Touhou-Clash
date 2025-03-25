@@ -31,13 +31,14 @@ tun:
   auto-route: true
 # enable only when linux environment
   #auto-redirect: true
+  #gso: true
   auto-detect-interface: true
   dns-hijack:
     - any:53
     - tcp://any:53
   device: utun0
   strict-route: true
-  gso: true
+
   endpoint-independent-nat: false
   route-exclude-address:
   - 10.0.0.0/8
