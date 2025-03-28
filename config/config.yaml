@@ -798,7 +798,7 @@ rules:
     - DOMAIN-SUFFIX,makersuite.google.com,🤖 人工智能
     #
     - GEOIP,private,🎯 全球直连,no-resolve
-    - RULE-SET,LocalAreaNetwork,🎯 全球直连
+    - RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve
     - GEOSITE,private,🎯 全球直连
     - RULE-SET,Download,🎯 全球直连
     - GEOSITE,adblock,🛑 广告拦截
