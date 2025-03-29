@@ -88,9 +88,14 @@ dns:
         # - tls://1.1.1.1:853
         # - tls://8.8.4.4:853
         # - https://doh.opendns.com/dns-query
-        - tls://0ms.dev:853
-        - https://dns.dnswarden.com/uncensored
-        - https://doh.apad.pro/dns-query
+        # - tls://0ms.dev:853
+        # - https://dns.dnswarden.com/uncensored
+        # - https://doh.apad.pro/dns-query
+        - tls://dns.alidns.com:853
+        - tls://dot.pub:853
+        - tls://dot.360.cn:853
+        - https://sm2.doh.pub/dns-query
+        
     fallback-filter:
         geoip: true
         domain:
