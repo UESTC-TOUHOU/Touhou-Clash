@@ -53,11 +53,14 @@ sniffer:
 store-selected: true
 find-process-mode: "off"
 dns:
-    enable: true
-    listen: 0.0.0.0:53
-    use-hosts: true
-    ipv6: true
-    default-nameserver:
+  enable: true
+  listen: 0.0.0.0:53
+  use-hosts: true
+  ipv6: true
+  respect-rules: true
+  proxy-server-nameserver:
+        - tls://8.8.8.8:853
+  default-nameserver:
         - 223.5.5.5
         - 36.99.170.86
         #- 114.114.114.114
@@ -85,22 +88,29 @@ dns:
     #    - 202.115.64.33    #成都教育网
     #    - 202.115.32.39    #成都教育网
     fallback:
-        # - tls://1.1.1.1:853
+        - tls://8.8.8.8:853
+        - tls://1.1.1.1:853
+        # - tls://1.0.0.1:853
         # - tls://8.8.4.4:853
+        # - https://dns.google/dns-query
+        # - https://cloudflare-dns.com/dns-query
         # - https://doh.opendns.com/dns-query
         # - tls://0ms.dev:853
         # - https://dns.dnswarden.com/uncensored
         # - https://doh.apad.pro/dns-query
-        - tls://dns.alidns.com:853
-        - tls://dot.pub:853
-        - tls://dot.360.cn:853
-        - https://sm2.doh.pub/dns-query
         
     fallback-filter:
         geoip: true
+        geoip-code: CN
+        geosite:
+            - gfw
+            - geolocation-!cn
         domain:
+            - "+.google.com"
             - "+.bing.com"
             - "+.linkedin.com"
+            - "+.facebook.com"
+            - "+.youtube.com"
 hosts:
     "time.android.com": 203.107.6.88
     "time.facebook.com": 203.107.6.88
