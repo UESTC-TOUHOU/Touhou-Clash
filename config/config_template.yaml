@@ -35,12 +35,12 @@ dns:
   listen: 0.0.0.0:53
   use-hosts: true
   ipv6: true
+  respect-rules: true
+  proxy-server-nameserver:
+    - tls://8.8.8.8:853
   default-nameserver:
-    - 223.5.5.5    
-    - 36.99.170.86
-    #- 114.114.114.114
-    - tls://223.5.5.5:853
-    - https://223.5.5.5/dns-query
+    - tls://223.6.6.6:853
+    - tls://36.99.170.86:853
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -63,6 +63,8 @@ dns:
 #    - 202.115.64.33    #成都教育网
 #    - 202.115.32.39    #成都教育网      
   fallback: 
+    - tls://8.8.8.8:853
+    - tls://1.1.1.1:853
     - tls://1.1.1.1:853
     - tls://8.8.4.4:853
     - https://doh.opendns.com/dns-query
